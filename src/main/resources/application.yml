@@ -1,0 +1,34 @@
+server:
+  port: 8080
+spring:
+  redis:
+    # Redis服务器地址
+    host: localhost
+    #Redis服务器连接端口
+    port: 6379
+    #password:
+    # Redis数据库索引（默认为0）
+    database: 1
+    # 连接超时时间（毫秒）
+    timeout: 5000
+    jedis:
+      pool:
+        #连接池最大连接数（使用负值表示没有限制）
+        max-active: 100
+        # 连接池中的最小空闲连接
+        max-idle: 10
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 100000
+
+accessFile:
+  resourceHandler: /show/** #匹配需要拦截的URL
+  location: C:/Users/shang/Downloads/  #本地文件夹
+
+fdfs:
+  connect-timeout: 601
+  so-timeout: 1500
+  thumb-image:
+    height: 60
+    width: 60
+  tracker-list:
+    - 192.168.1.12:22122
